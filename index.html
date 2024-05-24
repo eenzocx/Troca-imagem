@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Troca-Imagem</title>
+    <script src="./assets/js/script.js">
+document.addEventListener('DOMContentLoaded', function() {
+        var button = document.getElementById('trocaImagem');
+        var image = document.querySelector('img');
+        var imageIndex = 0;
+        var images = ['download.jpg', 'kek.png', 'Mídia.jpg']; 
+
+        button.addEventListener('click', function() {
+            image.src = images[imageIndex];
+            imageIndex = (imageIndex + 1) % images.length;
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="box">
+    <h1>O programa irá trocar de imagens constantemente</h1>
+
+    <p>Clique no botão abaixo para trocar a imagem!</p>
+    <img style="width: 300px; border-radius: 30px;" src="./assets/img/download.jpg" alt="macaco">
+    <br>
+    <button id="trocaImagem">Trocar Imagem</button>
+    </div>
+    <script src="./assets/js/script.js">
+document.addEventListener('DOMContentLoaded', function() {
+        var button = document.getElementById('trocaImagem');
+        var image = document.querySelector('img');
+        var imageIndex = 0;
+        var images = ['download.jpg', 'kek.png', 'Mídia.jpg']; 
+
+        button.addEventListener('click', function() {
+            image.src = images[imageIndex];
+            imageIndex = (imageIndex + 1) % images.length; 
+        });
+    });</script>
+</body>
+</html>
